@@ -10,12 +10,11 @@ const port = 3000;
 //when connected
 wsServer.on("connection", (clientSocket) => {
   //send a connection successful message
-  clientSocket.send("connection successfuls");
+  clientSocket.send("connection successful");
 
-  //when message received from client, console.log the message and re-send it back to the client
+  //when message received from client, console.log the message
   clientSocket.on("message", (message) => {
-    console.log(message.toString);
-    clientSocket.send(message.toString());
+    console.log(message.toString());
   });
 });
 
