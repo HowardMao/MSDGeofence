@@ -8,7 +8,7 @@ export default class Map extends Component {
     longitude: 174.76696,
     latitudeDelta: 0.005,
     longitudeDelta: 0.005,
-    circleRadius: 20,
+    circleRadius: 40,
   };
 
   render() {
@@ -26,7 +26,6 @@ export default class Map extends Component {
           }}
         >
           <MapView.Circle
-            key={2}
             center={{
               latitude: this.state.latitude,
               longitude: this.state.longitude,
