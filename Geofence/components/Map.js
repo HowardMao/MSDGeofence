@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { View, StyleSheet } from "react-native";
 import MapView, { PROVIDER_GOOGLE, Circle } from "react-native-maps";
-import * as Permissions from "expo-permissions";
 
 export default class Map extends Component {
   state = {

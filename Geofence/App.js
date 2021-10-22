@@ -16,7 +16,6 @@ import { IP } from "@env";
 export default function App() {
   const [serverConnection, setServerConnection] = useState("dis/unconnected");
   const [messageFromServer, setMessageFromServer] = useState("");
-  const [hasLocation, setHasLocation] = useState(false);
   const [location, setLocation] = useState(null);
 
   var ws = React.useRef(new WebSocket("ws://" + IP + ":3000")).current;
@@ -54,8 +53,9 @@ export default function App() {
           }}
         />
         <Text>Server Connection is: {serverConnection}</Text>
-        <Text>{JSON.stringify(location)}</Text>
         <Text>Current message from Server: {messageFromServer}</Text>
+
+        <Text>{JSON.stringify(location)}</Text>
       </View>
       <Map style={{ flex: 1 }} />
     </SafeAreaView>
