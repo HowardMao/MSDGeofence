@@ -41,14 +41,14 @@ export default function App() {
   }, []);
 
   sendMessage = () => {
-    ws.send("message sent");
+    ws.send(JSON.stringify(location));
   };
 
   return (
     <SafeAreaView style={styles.container}>
       <View style={{ flex: 0.75 }}>
         <Button
-          title="send message to server"
+          title="send location to server"
           onPress={() => {
             sendMessage();
           }}
