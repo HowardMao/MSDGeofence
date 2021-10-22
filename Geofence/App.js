@@ -39,7 +39,9 @@ export default function App() {
     };
   }, []);
 
-  sendMessage = () => {
+  sendMessage = async () => {
+    let currentLocation = await Location.getCurrentPositionAsync({});
+    setLocation(currentLocation);
     ws.send(JSON.stringify(location));
   };
 
